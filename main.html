@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>ចុចទីនេះ</h1>
+            <p>Click the button below to reveal the content.</p>
+
+            <button id="showBtn">Show Content</button>
+
+            <div id="content" class="hidden">
+                <h2>អាជើងស្តាយប្រចាំភូមិ</h2>
+
+                <img src="photo_2026-06-19_09-23-38.jpg" alt="Nature Photo">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById("showBtn");
+        const content = document.getElementById("content");
+
+        btn.addEventListener("click", () => {
+            content.classList.toggle("show");
+
+            if (content.classList.contains("show")) {
+                btn.textContent = "Hide Content";
+            } else {
+                btn.textContent = "Show Content";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
